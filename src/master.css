@@ -875,7 +875,7 @@ legend {
 }
 
 .searchpad {
-  min-height: 100vh;
+  min-height: calc(100vh - 48px);
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
