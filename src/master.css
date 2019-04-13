@@ -17,14 +17,6 @@ body {
   height: 100%;
 }
 
-@font-face {
-  font-family: 'Alegreya';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Alegreya Medium'), local('Alegreya-Medium'), url(../assets/misc/Alegreya.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 @keyframes startEntrance {
   0% {
     opacity: 0;
@@ -43,7 +35,20 @@ body {
     transform: scale3d(1, 1, 1);
   }
 
+  77% {
+    opacity: 0;
+    top: calc(50vh - 64px);
+    transform: scale3d(1, 1, 1);
+  }
+
   84% {
+    opacity: 0;
+    top: calc(50vh - 64px);
+    transform: scale3d(1, 1, 1);
+  }
+
+  84.01% {
+    opacity: 1;
     left: calc(((100vw - 60px - 48px)*(0.5)) - 18px);
     top: -45px;
     transform: scale3d(0.25, 0.25, 0.25);
@@ -172,6 +177,20 @@ body {
   }
 }
 
+@keyframes nubulea {
+  0% {
+    left: calc(100vw - 60px);
+  }
+
+  50% {
+    left: calc(100vw - 450px);
+  }
+
+  100% {
+    left: calc(100vw - 60px);
+  }
+}
+
 .MainFrame {
   position: fixed;
   top: 0%;
@@ -221,11 +240,8 @@ body {
 }
 
 .Tag {
-  color: #0e0e0e;
-  font-family: 'alegreya';
-  font-size: 20px;
   position: fixed;
-  top: 6px;
+  top: 9px;
   left: calc(((100vw - 60px - 48px)*(0.5)) + 25px);
   opacity: 0;
   animation-name: slideIn;
@@ -251,8 +267,8 @@ body {
   height: 100vh;
   width: 48px;
   animation-name: slidePanelIn;
-  animation-duration: 1s;
-  animation-delay: 5s;
+  animation-duration: 0.8s;
+  animation-delay: 4.35s;
   animation-fill-mode: forwards;
 }
 
@@ -301,9 +317,18 @@ li a {
   height: calc(100vh - 40px);
   width: 60px;
   animation-name: slideInPan;
-  animation-duration: 1s;
-  animation-delay: 5s;
+  animation-duration: 0.8s;
+  animation-delay: 4.35s;
   animation-fill-mode: forwards;
+}
+
+.nubulea {
+  position: fixed;
+  top: 48px;
+  left: calc(100vw - 60px);
+  animation-name: nubulea;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 hr {
@@ -321,12 +346,12 @@ hr {
   opacity: 0;
   animation-name: invisible;
   animation-duration: 0.25s;
-  animation-delay: 4.75s;
+  animation-delay: 4.25s;
   animation-fill-mode: forwards;
 }
 
 hr.style {
-  height: 1px;
+  height: 1.5px;
   border: 0;
   background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
@@ -340,24 +365,27 @@ hr.style {
 
 .searchpad {
   position: fixed;
-  top: calc((100vh / 2) - 48px);
+  top: calc(100vh / 2);
   left: calc((100vw / 2) - 300px);
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
   line-height: 1.4;
   display: block;
+  height: 64px;
   width: 600px;
   max-width: 600px;
   opacity: 0;
   animation-name: invisible;
   animation-duration: 0.5s;
-  animation-delay: 4.75s;
+  animation-delay: 4.25s;
   animation-fill-mode: forwards;
 }
 
 legend {
-  position: relative;
-  left: 22.36px;
+  position: fixed;
+  top: calc((100vh / 2) - 64px);
+  left: calc((100vw / 2) - 277.625px);
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 32px;
   color: #0e0e0e;
   font-weight: 800;
@@ -367,9 +395,12 @@ legend {
   margin: 0;
   padding: 0;
   display: block;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
   white-space: normal;
+  opacity: 0;
+  animation-name: invisible;
+  animation-duration: 0.5s;
+  animation-delay: 4.25s;
+  animation-fill-mode: forwards;
 }
 
 .form-control {
@@ -377,8 +408,6 @@ legend {
   width: 100%;
   height: 64px;
   background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 2.5px;
   font-size: 14px;
   appearance: none;
 }

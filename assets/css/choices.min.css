@@ -1,7 +1,7 @@
 .choices {
   position: relative;
   margin-bottom: 24px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .choices:focus {
@@ -123,11 +123,14 @@
   vertical-align: top;
   width: 100%;
   background-color: #f9f9f9;
-  padding: 7.5px 7.5px 3.75px;
-  border: 1px solid #ddd;
-  border-radius: 2.5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  border-radius: 50px;
+  border: 2px solid #ddd;
   font-size: 14px;
-  min-height: 44px;
+  min-height: 54px;
   overflow: hidden
 }
 
@@ -136,7 +139,8 @@
 }
 
 .is-open .choices__inner {
-  border-radius: 2.5px 2.5px 0 0
+  border-radius: 50px;
+  border: 2px solid #ddd;
 }
 
 .is-flipped.is-open .choices__inner {
@@ -146,7 +150,7 @@
 .choices__list {
   margin: 0;
   padding-left: 0;
-  list-style: none
+  list-style: none;
 }
 
 .choices__list--single {
