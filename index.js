@@ -19,7 +19,7 @@ function createWindow() {
     center: true,
     minWidth: 896,
     minHeight: 640,
-    icon: 'assets/icons/favicon.ico'
+    icon: './assets/icons/favicon.ico'
   })
 
   mainWindow.once('ready-to-show', () => {
@@ -27,7 +27,7 @@ function createWindow() {
   })
 
   mainWindow.setMenu(null)
-  
+
   // and load the index.html of the app.
   mainWindow.loadFile('src/search.html')
 

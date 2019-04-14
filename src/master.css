@@ -15,6 +15,7 @@ body {
   background-color: #f2f2fd;
   width: 99%;
   height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 @keyframes startEntrance {
@@ -191,10 +192,22 @@ body {
   }
 }
 
+@keyframes slideup {
+  0% {
+    top: 100vh;
+  }
+
+  100% {
+    top: 42px;
+  }
+}
+
 .MainFrame {
   position: fixed;
   top: 0%;
   left: 0%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .Logo {
@@ -293,8 +306,14 @@ li a {
 }
 
 .setting {
+  background-color: transparent;
   position: fixed;
   bottom: 48px;
+  left: 0px;
+  right: calc(100vw - 48px);
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .exit {
@@ -331,7 +350,7 @@ li a {
   animation-iteration-count: infinite;
 }
 
-hr {
+hr.style {
   position: fixed;
   top: 32px;
   left: 48px;
@@ -410,4 +429,49 @@ legend {
   background-color: #f9f9f9;
   font-size: 14px;
   appearance: none;
+}
+
+.Settings {
+  position: fixed;
+  top: 100vh;
+  left: 48px;
+  width: calc(100vw - 48px - 60px);
+  height: calc(100vh - 40px);
+  background-color: #f2f2fd;
+}
+
+.headin {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.set-card {
+  position: relative;
+  left: 22px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 744px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.set-card:hover {
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+}
+
+.set-container {
+  padding: 2px 16px;
+}
+
+.sub-details {
+  position: relative;
+  bottom: 50px;
+  color: #aaa;
+}
+
+.set-button {
+  position: relative;
+  bottom: 30px;
+  left: 644px;
 }

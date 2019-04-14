@@ -28,7 +28,7 @@
         </li>
         <li><a href="#">F</a>
         </li>
-        <li class="setting"><a href="#Settings"><img src="../assets/icons/Settings.png" alt="Settings"> </a>
+        <li><button id="setting" class="setting" type="button" onclick="document.getElementById('Settings').style.animation = 'slideup 1s forwards'"><img src="../assets/icons/Settings.png" alt="Settings"> </button>
         </li>
         <li><button id="exit" class="exit"><img src="../assets/icons/Exit.png" alt="Exit"> </button>
         </li>
@@ -52,12 +52,22 @@
     <div class="Pan-View">
       <img class="nubulea" src="../assets/imgs/nubulea.png">
     </div>
+    <legend>WHAT ARE YOU LOOKING FOR?<br></legend>
+    <div class="searchpad">
+      <input class="form-control" id="searchpad-bubble" type="text" placeholder="Type to search">
+    </div>
   </div>
-  <legend>WHAT ARE YOU LOOKING FOR?<br></legend>
-  <div class="searchpad">
-    <input class="form-control" id="searchpad-bubble" type="text" placeholder="Type to search">
+  <div class="Settings" id="Settings">
+    <h1 class="headin"><img src="../assets/imgs/settings.png" alt="Settings"> </h1>
+    <div class="set-card">
+      <div class="set-container">
+        <h4><b>Account Settings</b></h4>
+        <p>Delete the account</p>
+        <button class="set-button">Delete</button>
+        <p class="sub-details">Use on your on risk. All data will be lost.</p>
+      </div>
+    </div>
   </div>
-
   <script src="scripts.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
