@@ -9,6 +9,9 @@
   "author": "Shreyansh Nayak",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^4.1.4"
+    "electron": "4.1.4"
+  },
+  "dependencies": {
+    "mysql": "^2.16.0"
   }
 }
