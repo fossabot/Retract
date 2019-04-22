@@ -1,6 +1,7 @@
 const remote = require('electron').remote;
 
 document.getElementById("exit").addEventListener("click", function(e) {
+  connectionEnd();
   var window = remote.getCurrentWindow();
   window.close();
 });

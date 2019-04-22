@@ -19,6 +19,7 @@ function createWindow() {
     center: true,
     minWidth: 896,
     minHeight: 640,
+    webPreferences: {nodeIntegration: true},
     icon: './assets/icons/favicon.ico'
   })
 
@@ -27,6 +28,7 @@ function createWindow() {
   })
 
   mainWindow.setMenu(null)
+  mainWindow.webContents.openDevTools({mode:'undocked'})
 
   // and load the index.html of the app.
   mainWindow.loadFile('src/search.html')

@@ -1,10 +1,11 @@
 {
   "name": "RETRACT",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Do you know what Life is? It is something which was never meant to be.",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package": "electron-packager . retract --icon=\"./assets/icons/favicon.ico\" --asar"
   },
   "author": "Shreyansh Nayak",
   "license": "MIT",
@@ -12,6 +13,7 @@
     "electron": "4.1.4"
   },
   "dependencies": {
+    "mongodb": "^3.2.3",
     "mysql": "^2.16.0"
   }
 }

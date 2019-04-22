@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="master.css">
   <link rel="stylesheet" href="../assets/css/choices.min.css">
   <script src="../assets/js/choices.min.js"></script>
+  <script src="../assets/js/mysql.js"></script>
+  <script src="../assets/js/mongodb.js"></script>
   <link rel="favicon" href="..assets/icons/favicon.ico">
 </head>
 
@@ -61,9 +63,10 @@
     <h1 class="headin"><img src="../assets/imgs/settings.png" alt="Settings"> </h1>
     <div class="set-card">
       <div class="set-container">
-        <h4><b>Account Settings</b></h4>
+        <h3><b>Account Settings</b></h3>
+        <hr class="sectiond">
         <p>Delete the account</p>
-        <button class="set-button">Delete</button>
+        <button class="set-button" onclick="rogue()">Delete</button>
         <p class="sub-details">Use on your on risk. All data will be lost.</p>
       </div>
     </div>
@@ -71,7 +74,9 @@
   <script src="scripts.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var textPresetVal = new Choices('#searchpad-bubble', {});
+      var textPresetVal = new Choices('#searchpad-bubble', {
+        removeItemButton: true,
+      });
     });
   </script>
 </body>
