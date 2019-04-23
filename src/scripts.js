@@ -40,3 +40,12 @@ function invertMode() {
     }
   }
 }
+
+function createSearch() {
+  var choiceItem = document.getElementsByClassName("choices__item");
+  var searchList = [];
+  for (var i = 0; i < choiceItem.length; i++) {
+    searchList.push(choiceItem[i].getAttribute("data-value"));
+  }
+  console.log(searchList);
+}
