@@ -11,10 +11,10 @@
   <script src="../assets/js/choices.min.js"></script>
   <script src="../assets/js/mysql.js"></script>
   <script src="../assets/js/mongodb.js"></script>
-  <link rel="favicon" href="..assets/icons/favicon.ico">
+  <link rel="favicon" href="../assets/favicons/favicon.ico">
 </head>
 
-<body>
+<body theme="light">
   <div class="MainFrame">
     <div class="Nav-Panel">
       <ul>
@@ -38,10 +38,10 @@
     </div>
     <div class="top-bar">
       <div class="Tag">
-        <img src="../assets/imgs/name.png" alt="">
+        <img id="Tag" src="../assets/imgs/name.png" alt="Retract">
       </div>
       <div class="Logo">
-        <img src="Logo.ico" alt="Logo">
+        <img src="../assets/logo/128x128.png" alt="Logo">
       </div>
       <div class="loaddots">
         <div class="dot1"></div>
@@ -54,31 +54,39 @@
     <div class="Pan-View">
       <img class="nubulea" src="../assets/imgs/nubulea.jpg">
     </div>
-    <img class="whatimg" src="../assets/imgs/What.png" alt="What are you looking for?">
+    <img class="whatimg" id="whatimg" src="../assets/imgs/What.png" alt="What are you looking for?">
     <div class="searchpad">
       <input class="form-control" id="searchpad-bubble" type="text" placeholder="Type to search">
     </div>
   </div>
   <div class="Settings" id="Settings">
-    <h1 class="headin"><img src="../assets/imgs/settings.png" alt="Settings"> </h1>
+    <h1 class="headin"><img id="headin" src="../assets/imgs/settings.png" alt="Settings"> </h1>
     <div class="set-card">
+      <h3 class="sub-title"><b>Account Settings</b></h3>
+      <hr class="sectiond">
       <div class="set-container">
-        <h3><b>Account Settings</b></h3>
-        <hr class="sectiond">
         <p>Delete the account</p>
-        <button class="set-button" onclick="rogue()">Delete</button>
+        <button class="set-button" onclick="removeUser()">Delete</button>
         <p class="sub-details">Use on your on risk. All data will be lost.</p>
       </div>
     </div>
-  </div>
-  <script src="scripts.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var textPresetVal = new Choices('#searchpad-bubble', {
-        removeItemButton: true,
+    <div class="set-card">
+      <h3 class="sub-title"><b>App Settings</b></h3>
+      <hr class="sectiond">
+      <div class="set-container">
+        <p>Turn on Dark Mode</p>
+        <button class="set-button" onclick="invertMode()">Mode</button>
+        <p class="sub-details">Changing theme for optimized color schemes.</p>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var textPresetVal = new Choices('#searchpad-bubble', {
+          removeItemButton: true,
+        });
       });
-    });
-  </script>
+    </script>
 </body>
 
 </html>
