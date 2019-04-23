@@ -6,17 +6,6 @@
   --search-color: #f9f9f9;
 }
 
-[theme="dark"] {
-  --primary-color: #b388ff;
-  --secondary-color: #311b92;
-  --dark-color: #f2f2fd;
-  --light-color: #0e0e0e;
-}
-
-img[theme="dark"] {
-  filter:invert(100%);
-}
-
 body {
   margin: 0;
   background-color: var(--light-color);
@@ -24,6 +13,10 @@ body {
   height: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
+/* ///////////////////  Animations   \\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////  Animations   \\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////  Animations   \\\\\\\\\\\\\\\\\\\ */
 
 @keyframes startEntrance {
   0% {
@@ -218,6 +211,10 @@ body {
     top: 100vh;
   }
 }
+
+/* ///////////////////  Light Mode   \\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////  Light Mode   \\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////  Light Mode   \\\\\\\\\\\\\\\\\\\ */
 
 .MainFrame {
   position: fixed;
@@ -494,4 +491,32 @@ hr.style {
 
 .sAnim-down {
   animation: slidedown 0.5s linear 0s forwards;
+}
+
+/* ///////////////////  Dark Mode   \\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////  Dark Mode   \\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////  Dark Mode   \\\\\\\\\\\\\\\\\\\ */
+
+[theme="dark"] {
+  --primary-color: #b388ff;
+  --secondary-color: #311b92;
+  --dark-color: #f2f2fd;
+  --light-color: #212121;
+  color: #fff;
+}
+
+#Tag[theme="dark"] {
+  filter:invert(100%);
+}
+
+#headin[theme="dark"] {
+  filter:invert(100%);
+}
+
+#whatimg[theme="dark"] {
+  filter:invert(100%);
+}
+
+.set-card[theme="dark"] {
+  background-color: #484848;
 }

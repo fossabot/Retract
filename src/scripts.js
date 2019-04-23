@@ -1,4 +1,5 @@
 const remote = require('electron').remote;
+var path = require('path');
 
 document.getElementById("exit").addEventListener("click", function(e) {
   connectionEnd();
@@ -19,16 +20,23 @@ function settingsMenu() {
 
 function invertMode() {
   var themeM = document.body.getAttribute("theme");
-  var themeImgs = ["Tag", "whatimg", "headin"];
+  var themeImgs = ["Tag", "whatimg", "headin", "set-card1", "set-card2"];
+  var navIcons = ["ico1", "ico2", "ico3", "ico4", "ico5", "ico6"];
   if (themeM == "light") {
     document.body.setAttribute("theme", "dark");
     for (var i = 0; i < themeImgs.length; i++) {
       document.getElementById(themeImgs[i]).setAttribute("theme", "dark");
     }
+    for (var i = 0; i < navIcons.length; i++) {
+      document.getElementById(navIcons[i]).style.filter = "brightness(0%) saturate(100%) invert(54%) sepia(85%) saturate(1508%) hue-rotate(218deg) brightness(103%) contrast(102%)";
+    }
   } else {
     document.body.setAttribute("theme", "light");
     for (var i = 0; i < themeImgs.length; i++) {
       document.getElementById(themeImgs[i]).setAttribute("theme", "light");
+    }
+    for (var i = 0; i < navIcons.length; i++) {
+      document.getElementById(navIcons[i]).style.filter = "";
     }
   }
 }
