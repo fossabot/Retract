@@ -8,6 +8,7 @@ const client = new mongoClient(url, {
 function createSearch() {
   var choiceItem = document.getElementsByClassName("choices__item");
   var searchList = [];
+  var searchResult = [];
   for (var i = 0; i < choiceItem.length; i++) {
     searchList.push(choiceItem[i].getAttribute("data-value"));
   }
@@ -27,9 +28,10 @@ function createSearch() {
         }
       }).toArray(function(err, result) {
         if (err) throw err;
-        console.log(result);
+        searchResult.push(result);
       });
     }
+    console.log(searchResult);
     client.close();
   });
 }
