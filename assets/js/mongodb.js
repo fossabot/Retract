@@ -1,9 +1,6 @@
 var mongo = require('mongodb');
 var mongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://retract_user1:vATxI%5EKi82rX@retract-thoi0.mongodb.net/test?retryWrites=true";
-const client = new mongoClient(url, {
-  useNewUrlParser: true
-});
 
 function createSearch() {
   var choiceItem = document.getElementsByClassName("choices__item");
@@ -14,8 +11,12 @@ function createSearch() {
   }
   searchList.pop();
   console.log(searchList);
-  client.connect(err => {
-    const collection = client.db("Retract").collection("Tags_Ids");
+  mongoClient.connect(url, {
+    useNewUrlParser: true
+  }, function(err, db) {
+    if (err) throw err;
+    const database = db.db("Retract");
+    const collection = database.collection("Tags_Ids");
     console.log("Connected to the Server!");
     // perform actions on the collection object
     for (var i = 0; i < searchList.length; i++) {
@@ -32,6 +33,6 @@ function createSearch() {
       });
     }
     console.log(searchResult);
-    client.close();
+    db.close();
   });
 }
