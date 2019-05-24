@@ -1,7 +1,11 @@
 {
   "name": "RETRACT",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Do you know what Life is? It is something which was never meant to be.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DataNode-149/Retract.git"
+  },
   "main": "index.js",
   "scripts": {
     "start": "electron .",
@@ -10,10 +14,9 @@
   "author": "Shreyansh Nayak",
   "license": "MIT",
   "devDependencies": {
-    "electron": "4.1.4"
+    "electron": "^5.0.1"
   },
   "dependencies": {
-    "mongodb": "^3.2.3",
-    "mysql": "^2.16.0"
+    "mongodb": "^3.2.5"
   }
 }

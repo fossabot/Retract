@@ -1,7 +1,7 @@
 const remote = require('electron').remote;
 
 document.getElementById("exit").addEventListener("click", function(e) {
-  connectionEnd();
+  //connectionEnd();
   var window = remote.getCurrentWindow();
   window.close();
 });
@@ -38,4 +38,8 @@ function invertMode() {
       document.getElementById(navIcons[i]).style.filter = "";
     }
   }
+}
+
+function netStatus() {
+
 }
